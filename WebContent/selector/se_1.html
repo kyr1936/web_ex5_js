@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.c1 {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		
+	
+	
+	}
+
+
+</style>
+
+
+
+</head>
+<body>
+	<div id="d1" class="c1" onclick="go2()"> 
+		<h1>JavaScript Test</h1>
+		<p>Fancy</p>
+	</div>
+	<button onclick="go()">CLICK</button>
+	
+	
+
+
+
+
+<script type="text/javascript">
+	function go2() {
+		var d1 = document.getElementById("d1");
+		var value = d1.innerText;	
+		alert(value);
+		value=d1.innerHTML;
+		alert(value);
+	}
+	
+	
+	function go() {		// 누군가 호출했을 때 실행		
+		var d1 = document.getElementById("d1");
+		// d1.속성명;		- class 는 불가
+		// d1.getAttribute("속성명");
+		var value = d1.getAttribute("class");
+		d1.innerHTML="hihihihi";
+	}
+
+</script>
+</body>
+</html>

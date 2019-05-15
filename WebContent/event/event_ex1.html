@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var pw1 = document.getElementById("pw1");
+		var pw2 = document.getElementById("pw2");
+		var d = document.getElementById("d");
+		
+		pw2.addEventListener('keyup', function() {
+			if(pw1.value!=pw2.value) {
+				d.innerText="같지 않습니다";
+			} else {
+				d.innerText="같습니다";
+			}
+		});
+		
+		
+		
+		
+		
+		
+	}
+</script>
+
+
+</head>
+<body>
+	<p><input type="password" id="pw1"></p>
+	<p><input type="password" id="pw2"></p>
+	
+	<div id="d"></div>
+	
+	
+
+</body>
+</html>

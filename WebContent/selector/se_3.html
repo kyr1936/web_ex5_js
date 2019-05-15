@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	#d2 {
+		margin-top: 100px;
+		width: 500px;
+		height: 500px;
+		border : 1px solid;
+	}
+
+</style>
+</head>
+<body>
+	<div id="d1">
+		ROW<input type="text" id="row">
+		COLUMN<input type="text" id="col">
+		<button onclick="table()">CLICK</button>
+	</div>
+	<div id="d2">
+	</div>
+
+
+
+
+<script type="text/javascript">
+	function table() {
+		var d2 = document.getElementById("d2");
+		var row = document.getElementById("row").value;
+		var col = document.getElementById("col").value;
+	
+		row = parseInt(row);
+		col = parseInt(col);
+		
+		
+		var result = '<table border="1" width=200px height=100px>';
+		
+		for(var i=0; i<row; i++) {
+			result +='<tr>';		
+			
+			for(var j=0; j<col; j++) {
+				result = result+'<td></td>';
+			}
+			result = result+ '</tr>';
+		}
+		result =result +'</table>';
+		d2.innerHTML = result;
+	}
+
+</script>
+
+
+
+</body>
+</html>

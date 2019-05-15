@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<div id="d1"></div>
+	<button onclick="go()">CLICK</button>
+	<div id="d2">
+	<input type="text" id="num"> 
+	<button onclick="go2()">CLICK2</button>
+	</div>
+
+<script type="text/javascript">
+	function go() {
+		var d1 = document.getElementById("d1");
+		d1.innerHTML= '<img src="../images/cat2.jpg">';
+	}
+	/*
+	
+	function go2() {
+		var d1 = document.getElementById("d1");
+		var num = document.getElementById("num").value;
+	
+		num = parseInt(num);
+		
+		for(var i=0; i<num; i++) {
+			d1.innerHTML+='<input type="text">';
+		}
+
+	}
+	*/
+	function go2() {
+		var result=''; // 결과물
+		var d1 = document.getElementById("d1");
+		var num = document.getElementById("num").value;
+		
+		num = parseInt(num);
+		
+		for(var i=0; i<num; i++) {
+			result += '<input type="text">';
+		}
+		
+		
+		d1.innerHTML=result;
+		
+	}	
+	
+	
+	
+	
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

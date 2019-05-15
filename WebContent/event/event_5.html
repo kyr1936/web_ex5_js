@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var btn = document.getElementById("btn");
+		var btn1 = document.getElementById("btn1");
+		
+		btn.addEventListener('click', function() {
+			document.getElementById("result").innerHTML
+				="<button id='btn1'>click</button>";
+		});
+		
+		// 부모한테 event를 주고 자식한테 전파시켜야 함
+		result.addEventListener('click', function() {
+			alert('test');
+		
+		});
+	}
+
+</script>
+<style type="text/css">
+	#btn1 {
+		background-color: red;
+	}
+
+</style>
+</head>
+<body>
+	<button id="btn">click</button>
+	<div id= "result">
+	</div>
+
+</body>
+</html>

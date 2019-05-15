@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" id="in1"> <input type="text" id="in2"> <input type="text" id="in3">
+	= <input type="text" id="result" ><br>
+	<button onclick="f1()">CLICK</button>
+	
+	<script type="text/javascript">
+		
+		var in1 = document.getElementById('in1');
+		var in2 = document.getElementById('in2');
+		var in3 = document.getElementById('in3');
+		var result = document.getElementById('result');
+		function f1() {
+			var v1= in1.value;
+			var v2= in2.value;
+			var v3= in3.value;
+			
+			if(v2=="-"){
+				result.value=v1-v3;
+			} else if(v2=='+') {
+				result.value = parseInt(v1)+parseInt(v3);
+			} else if(v2=='*') {
+				result.value = v1*v3;
+			} else if(v2=='/') {
+				result.value = v1/v3;
+			} else if(v2=='%') {
+				result.value = v1%v3;
+			}
+
+		}
+	
+	
+	
+	
+	</script>
+
+
+
+</body>
+</html>

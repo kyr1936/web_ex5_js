@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+
+	$(function() {
+		
+		
+		$('#confirm').click(function() {
+			
+			open('./id_confirm_1.html','_blank','width=500, height=300, top=200, left=300');
+		});
+		$('#id').change(function () {		// 중복확인 후 id를 바꿔서 입력하면 
+			$('#idConfirm').val('0');
+		});
+		
+		
+		$('#pw2').blur(function() {
+			if($(this).val()!=$('#pw1').val()){
+				$('#pwd2').text("비밀번호가 일치하지 않습니다");
+				$(this).val('');
+			} else {
+				$('#pwd2').text("");
+			}
+		});
+		
+		$('#pw1').blur(function() {
+				$('#pw2').val('');
+			
+		});
+		
+		
+		
+		
+		
+		$('#join').click(function(){
+			var r = true;
+			$(".form-control").each(function() {
+				if($(this).val()==''){
+					r=false;
+				}
+			});
+			if(r && $('#idConfirm').val()=='1') {
+				$('#idform').submit();	
+			} else alert("모두 작성하세요");
+		});
+		
+		
+		
+		
+		
+	}); 
+
+</script>
+
+
+</head>
+<body>
+
+<div class="container">
+  <h2>Join form</h2>
+  <form action="./jquery_8.html" id="idform">
+    <div class="form-group">
+    	<label for="id">ID:</label>
+    	<input type="text" class ="form-control" id="id" placeholder="Enter id" name="id">
+		<input type="hidden" id="idConfirm" value="0">
+		<input type="button" value="중복확인" id="confirm">
+		<div id="idd"></div>
+    </div>
+    <div class="form-group">
+    	<label for="pwd">Password:</label>
+    	<input type="password" class="form-control " id="pw1" placeholder="Enter password" name="pwd">
+    	<div id="pwd1"></div>
+    </div>
+    <div class="form-group">
+    	<label for="pwd">Password:</label>
+    	<input type="password" class="form-control" id="pw2" placeholder="Enter password" name="pwd">
+    	<div id="pwd2"></div>
+    </div>
+	<div class="form-group">
+    	<label for="email">Email:</label>
+    	<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    	<div id="emaild"></div>
+    </div>
+	<div class="form-group">
+    	<label for="phone">Phone:</label>
+    	<input type="tel" class="form-control" id="phone" placeholder="Enter phone" name="phone">
+    </div>
+    
+    <input type="button"  class="btn btn-default" value="join" id="join">
+  </form>
+</div>
+
+</body>
+</html>

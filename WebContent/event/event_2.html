@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	window.onload = function() {
+		var btn = document.getElementById("btn");
+		btn.addEventListener('click', go);	//  go 라는 함수를 나중에 실행한다 .    *go() - 바로 실행 
+		
+	//	btn.addEventListener('click', function() {
+	//		go();
+	//	});
+		
+		
+		function go() {
+			alert(11);
+		}
+		
+		
+		var b = document.getElementsByClassName("b");
+		for(var i=0; i<b.length; i++) {
+		b[i].addEventListener('click', function() {
+			alert("class");
+		});
+		}
+		
+		/*	btn.onclick=function() {
+			alert("!");
+		}
+		*/
+	}
+
+
+</script>
+
+
+
+
+</head>
+<body>
+	<button id="btn" class="b">Click</button>
+	<button id="btn" class="b">Click</button>
+	<button id="btn" class="b">Click</button>
+	<button id="btn" class="b">Click</button>
+	
+</body>
+</html>

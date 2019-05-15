@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	#m2 {
+		display: none;
+	}
+</style>
+</head>
+<body>
+	<div id="check">
+		점심 <input type="radio" name="n" checked="checked" id="lunch" class="r1">
+		저녁 <input type="radio" name="n" id="dinner" class="r1">
+		<button onclick="go()">CLICK</button>
+	</div>
+	<div id="m1">
+		<p>김치찌개</p>
+		<p>짜장면</p>
+		<p>도시락</p>
+	</div>
+	<div id="m2"> 
+		<p>햄버거</p>
+		<p>피자</p>
+		<p>치킨</p>
+	</div>
+
+<script type="text/javascript">
+	
+	function go() {
+		var r1 = document.getElementsByClassName("r1"); //배열
+		var m1 = document.getElementById("m1");
+		var m2 = document.getElementById("m2");
+		if(r1[0].checked){
+			m1.style.display="block";
+			m2.style.display="none";
+		} else {
+			m2.style.display="block";
+			m1.style.display="none";
+		}
+	}
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

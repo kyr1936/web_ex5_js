@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	
+	$(function() {
+		$('#use').click (function() {
+			var v=$('#inputid').val();
+			opener.document.getElementById('id').value=v;
+			opener.document.getElementById('idConfirm').value="1";
+			
+			close();
+		});
+		
+	});
+
+
+</script>	
+
+
+
+</head>
+<body>
+    	<h1>중복 체크</h1>
+    	<input type="text" id="inputid">
+		<button>중복확인</button> <button id="use">사용</button>
+  	
+  
+</body>
+</html>

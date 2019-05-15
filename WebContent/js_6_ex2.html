@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<img alt="cat" src="./images/cat2.jpg" id="i1" class="c1" title="t1">
+	<br>
+	<button onclick="f1()">CLICK</button>
+	<button onclick="f2()">CHANGE</button>
+	<button onclick="f3()">Toggle</button>
+	
+
+	<script type="text/javascript">
+		
+		function f1() {
+			var v =  document.getElementById('i1');
+			// attribute 가지고오기
+			// i1.getAttribute("속성명");
+			// attribute 변경이나 추가할 때
+			// i1.setAttribute("속성명", "값");
+			
+			
+			alert(i1.getAttribute("alt"));
+		
+			alert(v.alt);
+			alert(v.src);
+			alert(v.title);
+		}
+		function f2() {
+	//		var i1.setAttribute("src", "./images/cat3.jpg");
+		}
+		
+		function f3() {
+			var v =  document.getElementById('i1');
+
+			if(v.title=="t1"){
+				v.src="./images/cat3.jpg";
+				v.title="t2";
+			} else {
+				v.src="./images/cat2.jpg";
+				v.title="t1";
+			}
+		}
+		
+		
+	</script>
+	
+	
+</body>
+</html>
